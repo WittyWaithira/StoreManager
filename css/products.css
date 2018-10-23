@@ -1,0 +1,19 @@
+header {
+    background-color:#FFFFFF;
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+footer {
+    background-color:#000000;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+footer li{
+  float:right;
+
+}
+footer form{
+  float: left;
+}
