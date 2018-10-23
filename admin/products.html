@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="products.css">
+
+    <title>Products</title>
+  </head>
+  <body>
+  <h2>Products</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:50%;">Product Name</th>
+    <th style="width:25%;">Quantity</th>
+    <th style="width:25%;">Price</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+    <td>KES3000</td>
+
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+    <td>KES3000</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+    <td>KES3000</td>
+  </tr>
+  <tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+    <td>KES3000</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+    <td>KES3000</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+    <td>KES3000</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>UK</td>
+    <td>KES3000</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+    <td>KES3000</td>
+  </tr>
+</table>
+<button class="button button1">Add</button>
+<button class="button button2">Delete</button>
+<button class="button button3">Modify</button>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+  </body>
+</html>
